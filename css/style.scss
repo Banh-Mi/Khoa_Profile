@@ -6,21 +6,27 @@
 }
 body {
 	user-select: none;
-	height: fit-content;
-	margin: 0;
-	width: 100vw;
-	overflow-x: hidden;
 	background-image: url(../img/background.png);
-	background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+	margin: 0;
     overflow-x: hidden;
-	background-attachment: fixed;
+    background-attachment: fixed;
+    background-size: cover;
     background-position: top;
-	background-size: cover;
+    background-repeat: no-repeat;
+	display: flex;
+	justify-content: center;
 }
 .main {
-	width: 55em;
+	width:55em;
 	height: fit-content;
-	margin: 30px auto;
+	margin-top: 100px	;
+	margin: 20px 10px;
+	border-radius: 10px;
+	text-align: center;
+	font-family: Round;
+	padding-bottom: 5px;
 	.title {
 		width: 100%;
 		font-family: 'Inter', sans-serif;
@@ -144,7 +150,7 @@ body {
 			margin: 0 auto;
 			.image {
 				.picture {
-					width:230px;
+					width:220px;
 					border-radius: 10px;
 				}
 			}
@@ -154,22 +160,78 @@ body {
 .img {
 	width: 35px;
 }
-@media screen and (max-width:500px) {
+@media screen and (max-width:750px) {
 	.main {
 		.title {
-			margin-top: 1.5em;
-			font-size: calc(1.2em + 5vw);
+			margin-top: 1em;
+			font-size: calc(1em + 5vw);
+			margin-bottom: 1em;
+		}
+		.header {
+			flex-direction: column;
+			height: auto;
+			padding-bottom: 20px;
+			.avatar {
+				margin-top: 15px;
+				margin-left: 20px;
+				width: 30vw;
+			}
+			.profile {
+				.name {
+					font-size: 10vw ;
+				}
+				.connect {
+					margin-left: -8vw;
+					.social {
+						margin-left: 8vw;
+						height: 15vw;
+						width: 15vw;
+					}
+				}
+			}
+			.line {
+				visibility: hidden;
+			}
+			.more {
+				width: 75%;
+				margin: 10px auto;
+				.button {
+					width: 65%;
+					justify-content: center;
+					flex-direction: column;
+					.follow_chat {
+						width: 150%;
+						font-size: 5vw;
+						border-radius: 55px;
+						margin-top: 3vw;
+					}
+				}
+				.birthday {
+					visibility: hidden;
+					position: absolute;
+				}
+				.hobbies {
+					visibility: hidden;
+					position: absolute;
+				}
+			}
 		}
 		.body {
+			.text {
+				font-size: calc(0.8em + 2.5vw);
+			}
 			.grid {
-				grid-template-columns: 50% 50%;
+				grid-template-columns: 100%;
 				.image {
 					.picture {
-						width:350px;
+						width:90%;
 					}
 				}
 			}
 		}
+	}
+	.img {
+		width:12vw;
 	}
 	
 }

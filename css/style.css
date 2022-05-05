@@ -11,18 +11,21 @@ body {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  margin: 0;
-  width: 100vw;
-  overflow-x: hidden;
   background-image: url(../img/background.png);
-  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
   overflow-x: hidden;
   background-attachment: fixed;
-  background-position: top;
   background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .main {
@@ -30,7 +33,12 @@ body {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  margin: 30px auto;
+  margin-top: 100px;
+  margin: 20px 10px;
+  border-radius: 10px;
+  text-align: center;
+  font-family: Round;
+  padding-bottom: 5px;
 }
 
 .main .title {
@@ -204,7 +212,7 @@ body {
 }
 
 .main .body .grid .image .picture {
-  width: 230px;
+  width: 220px;
   border-radius: 10px;
 }
 
@@ -212,17 +220,79 @@ body {
   width: 35px;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 750px) {
   .main .title {
-    margin-top: 1.5em;
-    font-size: calc(1.2em + 5vw);
+    margin-top: 1em;
+    font-size: calc(1em + 5vw);
+    margin-bottom: 1em;
+  }
+  .main .header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: auto;
+    padding-bottom: 20px;
+  }
+  .main .header .avatar {
+    margin-top: 15px;
+    margin-left: 20px;
+    width: 30vw;
+  }
+  .main .header .profile .name {
+    font-size: 10vw;
+  }
+  .main .header .profile .connect {
+    margin-left: -8vw;
+  }
+  .main .header .profile .connect .social {
+    margin-left: 8vw;
+    height: 15vw;
+    width: 15vw;
+  }
+  .main .header .line {
+    visibility: hidden;
+  }
+  .main .header .more {
+    width: 75%;
+    margin: 10px auto;
+  }
+  .main .header .more .button {
+    width: 65%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .main .header .more .button .follow_chat {
+    width: 150%;
+    font-size: 5vw;
+    border-radius: 55px;
+    margin-top: 3vw;
+  }
+  .main .header .more .birthday {
+    visibility: hidden;
+    position: absolute;
+  }
+  .main .header .more .hobbies {
+    visibility: hidden;
+    position: absolute;
+  }
+  .main .body .text {
+    font-size: calc(0.8em + 2.5vw);
   }
   .main .body .grid {
-    -ms-grid-columns: 50% 50%;
-        grid-template-columns: 50% 50%;
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
   }
   .main .body .grid .image .picture {
-    width: 350px;
+    width: 90%;
+  }
+  .img {
+    width: 12vw;
   }
 }
 /*# sourceMappingURL=style.css.map */
