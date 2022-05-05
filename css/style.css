@@ -131,7 +131,6 @@ body {
 
 .main .header .more {
   margin-right: 40px;
-  font-size: 15px;
   font-family: 'Fira Code', monospace;
   color: #f23551;
 }
@@ -212,7 +211,7 @@ body {
 }
 
 .main .body .grid .image .picture {
-  width: 220px;
+  width: calc(6.5em + 8vw);
   border-radius: 10px;
 }
 
@@ -220,7 +219,7 @@ body {
   width: 35px;
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 780px) {
   .main .title {
     margin-top: 1em;
     font-size: calc(1em + 5vw);

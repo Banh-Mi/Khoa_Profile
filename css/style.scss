@@ -92,7 +92,6 @@ body {
 		}
 		.more {
 			margin-right:40px ;
-			font-size: 15px;
 			font-family: 'Fira Code', monospace;
 			color:#f23551;
 			.button {
@@ -150,7 +149,7 @@ body {
 			margin: 0 auto;
 			.image {
 				.picture {
-					width:220px;
+					width:calc(6.5em + 8vw);
 					border-radius: 10px;
 				}
 			}
@@ -160,7 +159,7 @@ body {
 .img {
 	width: 35px;
 }
-@media screen and (max-width:750px) {
+@media screen and (max-width:780px) {
 	.main {
 		.title {
 			margin-top: 1em;
